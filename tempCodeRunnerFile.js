@@ -1,0 +1,1 @@
+set CLOUDINARY_URL=cloudinary://598792189368595:KXnbhwu-_IDDxJahGzG5bcYn8bw@pradhancloud

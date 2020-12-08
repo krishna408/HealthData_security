@@ -1,0 +1,39 @@
+<%- include('partials/header') %>
+
+<div class="container">
+  <div class="jumbotron centered">
+    <i class="fas fa-hospital-user"></i>
+    <h2 class="display-3">HEALTH DATA EMPOWERMENT</h2>
+    <p class="secret-text">Your Data is in safe hands.</p>
+
+    <form action="/submit" method="POST" enctype="multipart/form-data">
+      <div class="form-group">
+      <input type="text" class="form-control text-center" name="secret" placeholder="Document ID">
+      </div>
+      <div class="form-group">
+        <label for="img">UPLOAD Document:</label>
+        <input type="file" id="img" name="img">
+        <input type="submit">
+      </div>
+      <button type="submit" class="btn btn-dark">Submit</button>
+    </form>
+    <div>
+      <%results.forEach((doc,index) => { %>
+        <div> 
+          <span>Document No</span>
+          <% index+1 %>
+          <span>: </span>
+          <a href=
+            <%-doc%>
+          >
+            Click here
+          </a>
+        </div> 
+      <% }) %>
+
+
+    </div>
+  </div>
+</div>
+<a class="btn btn-light btn-lg" href="/logout" role="button">Log Out</a>
+<%- include('partials/footer') %>
